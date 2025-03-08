@@ -27,9 +27,9 @@ function App() {
   return (
     <>
     <Navbar/>
-      <main>
-        <div className="left">
-          <div className="code">
+      <main className='h-[100%] w-[100%] p-[1.5rem] flex gap-[1rem]'>
+        <div className="h-[100%] flex-1/2 rounded-[0.7rem] bg-[#000000] relative">
+          <div className="h-[100%] w-[100%] m-0 rounded-[0.7rem] bg-[#000000]">
             <Editor
               value={code}
               onValueChange={code => setCode(code)}
@@ -48,10 +48,11 @@ function App() {
             />
           </div>
           <div
+          style={{ padding:"4px 20px"}}
             onClick={reviewCode}
-            className="review">Review</div>
+            className="absolute bottom-5 right-10 bg-amber-100 text-2xl rounded-md text-black text-500 cursor-pointer z-50 ">Review</div>
         </div>
-        <div className="right">
+        <div className="bg-[#343434] p-[1rem, 2rem] text-[1.5rem] overflow-auto h-[100%] flex-1/2 rounded-[0.7rem]">
           <Markdown
 
             rehypePlugins={[ rehypeHighlight ]}

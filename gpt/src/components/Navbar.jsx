@@ -2,10 +2,10 @@ import React from 'react'
 
 const Navbar = () => {
   return (
-    <div className=' bg-red-500 '>
-      <div className='my-2 py-2'>
-        AI
-      </div>
+    <div className='w-full'>
+   <div className=' py-2 mx-8'>
+    <h1 className='text-3xl font-bold uppercase'>AI Intraction</h1>
+   </div>
     </div>
   )
 }
